@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Focus</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header>
+        <div class="eyebrow">YouTube</div>
+        <h1>YouTube Focus</h1>
+        <p>Keep the useful parts. Lose the rabbit holes.</p>
+      </header>
+
+      <section class="settings" aria-label="Focus settings">
+        <label class="setting" for="study-mode">
+          <span class="setting-copy">
+            <span class="setting-title">Study Mode</span>
+            <span class="setting-description">Hide comments and recommendations</span>
+          </span>
+          <input id="study-mode" type="checkbox" role="switch">
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+
+        <label class="setting" for="no-shorts">
+          <span class="setting-copy">
+            <span class="setting-title">No Shorts</span>
+            <span class="setting-description">Remove Shorts everywhere on YouTube</span>
+          </span>
+          <input id="no-shorts" type="checkbox" role="switch">
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+      </section>
+
+      <p id="status" class="status" role="status">Changes apply immediately.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

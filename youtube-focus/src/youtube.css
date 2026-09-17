@@ -1,0 +1,107 @@
+/* The page gets these classes from content.js. CSS does the fast, repeatable hiding. */
+
+/* No Shorts: direct links disappear immediately, even before the JS scanner runs. */
+body.yf-no-shorts a[href^="/shorts"],
+body.yf-study-mode a[href^="/shorts"],
+body.yf-no-shorts a[href*="youtube.com/shorts"],
+body.yf-study-mode a[href*="youtube.com/shorts"],
+body.yf-no-shorts [data-yf-short-hidden="true"],
+body.yf-study-mode [data-yf-short-hidden="true"] {
+  display: none !important;
+}
+
+body.yf-no-shorts ytd-reel-shelf-renderer,
+body.yf-study-mode ytd-reel-shelf-renderer,
+body.yf-no-shorts ytm-reel-shelf-renderer,
+body.yf-study-mode ytm-reel-shelf-renderer {
+  display: none !important;
+}
+
+/* Study Mode: hide learning-adjacent distractions while retaining #playlist. */
+body.yf-study-mode #comments,
+body.yf-study-mode ytd-comments,
+body.yf-study-mode #chat,
+body.yf-study-mode ytd-live-chat-frame,
+body.yf-study-mode ytd-live-chat-renderer,
+body.yf-study-mode #secondary #related,
+body.yf-study-mode #secondary ytd-watch-next-secondary-results-renderer,
+body.yf-study-mode #secondary ytd-compact-autoplay-renderer,
+body.yf-study-mode #movie_player .ytp-endscreen-content,
+body.yf-study-mode #movie_player .ytp-ce-element,
+body.yf-study-mode ytd-browse[page-subtype="home"] #contents,
+body.yf-study-mode ytd-browse[page-subtype="home"] #primary #contents {
+  display: none !important;
+}
+
+/* Direct Shorts URLs get a full-page blocker. The underlying YouTube page is not exposed. */
+body.yf-shorts-blocked {
+  overflow: hidden !important;
+}
+
+body.yf-shorts-blocked > ytd-app {
+  visibility: hidden !important;
+}
+
+#yf-shorts-blocker {
+  align-items: center;
+  background: #0f0f0f;
+  box-sizing: border-box;
+  color: #f1f1f1;
+  display: none;
+  font-family: Roboto, Arial, sans-serif;
+  inset: 0;
+  justify-content: center;
+  padding: 24px;
+  position: fixed;
+  text-align: center;
+  z-index: 2147483647;
+}
+
+body.yf-shorts-blocked #yf-shorts-blocker {
+  display: flex;
+}
+
+.yf-blocker-card {
+  max-width: 420px;
+}
+
+.yf-blocker-card h1 {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.yf-blocker-card p {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+.yf-blocker-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.yf-blocker-actions button,
+.yf-blocker-actions a {
+  border: 0;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 18px;
+  text-decoration: none;
+}
+
+.yf-blocker-actions button {
+  background: #f1f1f1;
+  color: #0f0f0f;
+}
+
+.yf-blocker-actions a {
+  background: #272727;
+  color: #f1f1f1;
+}

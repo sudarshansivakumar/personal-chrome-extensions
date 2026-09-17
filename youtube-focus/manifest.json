@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus",
+  "version": "0.1.0",
+  "description": "Keep YouTube useful for learning by hiding Shorts, comments, and recommendations.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*"
+  ],
+  "action": {
+    "default_title": "YouTube Focus",
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*"
+      ],
+      "css": ["src/youtube.css"],
+      "js": ["src/selectors.js", "src/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+:root {
+  color-scheme: dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: #0f0f0f;
+  color: #f1f1f1;
+  margin: 0;
+  width: 340px;
+}
+
+.popup { padding: 22px; }
+
+.eyebrow {
+  color: #ff4e45;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -.02em;
+  margin: 5px 0 5px;
+}
+
+header p {
+  color: #aaa;
+  font-size: 13px;
+  margin: 0 0 22px;
+}
+
+.settings {
+  border: 1px solid #303030;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.setting {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  min-height: 74px;
+  padding: 14px 16px;
+}
+
+.setting + .setting { border-top: 1px solid #303030; }
+.setting:hover { background: #181818; }
+
+.setting-copy { display: grid; gap: 4px; }
+.setting-title { font-size: 14px; font-weight: 600; }
+.setting-description { color: #999; font-size: 11px; line-height: 1.35; }
+
+input {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.switch {
+  background: #555;
+  border-radius: 20px;
+  flex: 0 0 auto;
+  height: 22px;
+  padding: 3px;
+  transition: background .15s ease;
+  width: 38px;
+}
+
+.switch::after {
+  background: #ddd;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 16px;
+  transition: transform .15s ease;
+  width: 16px;
+}
+
+input:checked + .switch { background: #ff4e45; }
+input:checked + .switch::after { transform: translateX(16px); }
+input:focus-visible + .switch { outline: 2px solid #fff; outline-offset: 2px; }
+
+.status {
+  color: #777;
+  font-size: 11px;
+  margin: 16px 2px 0;
+}
