@@ -1,6 +1,8 @@
 # Personal Chrome Extensions
 
-Small, private-by-default Chrome extensions built to solve specific everyday problems without analytics, accounts, subscriptions, or remote services.
+Just some Chrome Extensions I am writing for myself - the Internet is a magical place but companies are incentivised to make you consume slop. 
+
+I haven't looked at the code for this and if you point a gun to my head and asked me what is going on you have one dead man and a felony on you. Rest of the Readme is also slop maxxed. Enjoy   
 
 ## YouTube Focus
 
